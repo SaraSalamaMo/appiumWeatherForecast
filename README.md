@@ -1,5 +1,6 @@
-# Appium automation for WeatherForecast.app
+# Appium automation testing for WeatherForecast.app
 
-## Set desired capabilities for android emulator 
+## Using desired capabilities for Android Emulator 
 
-## Get main screen 
+### Get main screen 
+### Changing Time format from 12 to 24 hours with its assertions
