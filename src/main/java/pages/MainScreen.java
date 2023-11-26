@@ -31,5 +31,31 @@ public class MainScreen {
 
     }
 
+    public void assert12HoursFormat(){
+        String tvDate = wait.until(ExpectedConditions.visibilityOfElementLocated(tvDateId)).getText();
+
+        Assert.assertTrue(tvDate.contains("AM") || tvDate.contains("PM"));
+    }
+
+    public void assert24HoursFormat(){
+        String tvDate = wait.until(ExpectedConditions.visibilityOfElementLocated(tvDateId)).getText();
+
+        Assert.assertFalse(tvDate.contains("AM") || tvDate.contains("PM"));
+    }
+
+
+    public void assertTempUnitInCelsius(){
+        String tempUnit = wait.until(ExpectedConditions.visibilityOfElementLocated(temperatureUnit)).getText();
+
+        Assert.assertEquals(tempUnit, "°C");
+    }
+
+
+    public void assertTempUnitInFahrenheit(){
+        String tempUnit = wait.until(ExpectedConditions.visibilityOfElementLocated(temperatureUnit)).getText();
+
+        Assert.assertEquals(tempUnit, "°F");
+    }
+
 
 }
