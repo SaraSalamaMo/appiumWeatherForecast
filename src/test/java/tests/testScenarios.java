@@ -12,10 +12,18 @@ public class testScenarios extends baseTest{
     }
 
     @Test(priority = 2)
-    public void changeTemperatureUnitToCelsius(){
+    public void changeTimeFormatTo24Hours(){
         mainScreen.openNavigationSettings();
         mainScreen.selectUnitSettings();
         mainScreen.changeTimeFormatTo24hours();
         mainScreen.assert24HoursFormat();
+    }
+
+    @Test(priority = 3)
+    public void changeTemperatureUnitToCelsius(){
+        mainScreen.openNavigationSettings();
+        mainScreen.selectUnitSettings();
+        mainScreen.changeTempUnitToCelsius();
+        mainScreen.assertTempUnitInCelsius();
     }
 }
