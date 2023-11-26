@@ -26,4 +26,10 @@ public class testScenarios extends baseTest{
         mainScreen.changeTempUnitToCelsius();
         mainScreen.assertTempUnitInCelsius();
     }
+
+    @Test(priority = 4)
+    public void checkRainsAndHumidityValuesForNextHours(){
+        int hours = 6;
+        mainScreen.rainAndHumidityValues(hours);
+    }
 }
